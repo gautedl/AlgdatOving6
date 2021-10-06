@@ -11,7 +11,7 @@ public class BreddeFørst {
                 if (f.dist = f.uendelig){
                     f.dist = ((Forgj)n.d).dist + 1;
                     f.forgj = n;
-                    kø.leggIKø(kø.til)
+                    kø.leggIKø(kø.til);
                 }
             }
         }
