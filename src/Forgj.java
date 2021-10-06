@@ -2,6 +2,8 @@ public class Forgj {
     int dist;
     Node forgj;
     static int uendelig = 1000000000;
+    public static Node[] node;
+    public int antallNoder = node.length;
     public int finn_dist(){
         return dist;
     }
@@ -14,7 +16,7 @@ public class Forgj {
 
 
     public void initforgj(Node s){
-        for (int i = N; i--> 0;){
+        for (int i = antallNoder; i--> 0;){
             node[i].d = new Forgj();
         }
         ((Forgj)s.d).dist = 0;
