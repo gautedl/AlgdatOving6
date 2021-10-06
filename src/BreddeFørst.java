@@ -1,4 +1,6 @@
 public class BreddeFørst {
+    public static Node[] node;
+    public int antallNoder = node.length;
 
     Forgj forgj = new Forgj();
 
@@ -10,7 +12,7 @@ public class BreddeFørst {
             Node n = (Node)kø.nesteIKø();
             for (Kant k = n.kant1; k != null; k = k.neste){
                 Forgj f = (Forgj)k.til.d;
-                if (f.dist = f.uendelig){
+                if (f.dist == f.uendelig){
                     f.dist = ((Forgj)n.d).dist + 1;
                     f.forgj = n;
                     kø.leggIKø(kø.til);
