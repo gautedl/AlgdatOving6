@@ -2,37 +2,42 @@ public class Kø {
 
     KøNode hode;
 
-    public void leggTilBakerst(KøNode node){
+    public boolean tom(){
+        return hode==null;
+    }
+
+    public void leggTilBakerst(Node node){
+        KøNode køNode = new KøNode(node);
         if(hode==null){
-            hode = node;
+            hode = køNode;
             return;
         }
         KøNode denne = hode;
         while(denne.neste()!=null){
             denne = denne.neste();
         }
-        denne.neste = node;
+        denne.neste = køNode;
     }
 
-    public KøNode taUtFremste(){
+    public Node taUtFremste(){
         KøNode retur = hode;
         retur.neste = null;
         hode = hode.neste();
-        return retur;
+        return retur.node();
     }
 
     private static class KøNode{
         KøNode neste;
-        int verdi;
+        Node node;
 
-        public KøNode(KøNode neste, int verdi){
-            this.neste = neste;
-            this.verdi = verdi;
+        public KøNode(Node node){
+            this.neste = null;
+            this.node = node;
         }
 
         public KøNode neste(){return neste;}
 
-        public int verdi(){return verdi;}
+        public Node node(){return node;}
     }
 
 }
