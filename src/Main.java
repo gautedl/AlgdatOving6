@@ -6,6 +6,10 @@ import java.net.URL;
 import java.util.StringTokenizer;
 
 public class Main {
+    Graf graf = new Graf();
+    BreddeFørst breddeFørst = new BreddeFørst();
+    Node[] node;
+
     public void ny_ugraf(URL url) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -37,8 +41,16 @@ public class Main {
         }
     }
 
-    public void lesFraUrl(URL url){
+    public void lesFraUrl(URL url) throws IOException {
 
+        Kø kø = new Kø();
+
+        ny_ugraf(url);
+
+        for (int i = 0; i < graf.N; i++){
+            breddeFørst.bfs(node[i]);
+            
+        }
     }
 
     public static void main(String[] args) {
