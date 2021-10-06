@@ -3,6 +3,21 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 public class Main {
+    public void ny_ugraf(BufferedReader br) throws IOException {
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(st.nextToken());
+        Node[] node = new Node[N];
+        for (int i=0; i<N; ++i) node[i] = new Node();
+        int K = Integer.parseInt(st.nextToken());
+        for (int i=0; i<K; ++i) {
+            st = new StringTokenizer(br.readLine());
+            int fra = Integer.parseInt(st.nextToken());
+            int til = Integer.parseInt(st.nextToken());
+            Kant k = new Kant(node[til], node[fra].kant1);
+            node[fra].kant1 = k;
+        }
+    }
+
     public void ny_ugraftab(BufferedReader br) throws IOException {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
@@ -16,7 +31,7 @@ public class Main {
             kant[fra][til].fins=1;
         }
     }
-    
+
     public static void main(String[] args) {
     }
 }
