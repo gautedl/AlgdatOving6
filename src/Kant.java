@@ -1,9 +1,9 @@
 public class Kant {
-    Kant k;
-    Node n;
+    Kant neste;
+    Node til;
 
-    public Kant(Kant k, Node n) {
-        this.k = k;
-        this.n = n;
+    public Kant(Node n, Kant nst) {
+        til = n;
+        neste = nst;
     }
 }
