@@ -2,7 +2,7 @@ public class Forgj {
     int dist;
     Node forgj;
     static int uendelig = 1000000000;
-    public Node[] node;
+    Node[] node;
     public int antallNoder = node.length;
     public int finn_dist(){
         return dist;
