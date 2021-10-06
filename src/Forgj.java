@@ -11,4 +11,11 @@ public class Forgj {
     public Forgj(){
         dist = uendelig;
     }
+
+    public void initforgj(Node s){
+        for (int i = N; i--> 0;){
+            node[i].d = new Forgj();
+        }
+        ((Forgj)s.d).dist = 0;
+    }
 }
