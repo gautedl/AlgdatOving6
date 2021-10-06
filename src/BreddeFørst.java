@@ -1,7 +1,7 @@
 public class BreddeFørst {
 
     public void bfs(Node s){
-        initforgj(s);
+        Forgj.initforgj(s);
         Kø kø = new Kø(N - 1);
         kø.leggIKø(s);
         while (kø.tom()){

@@ -12,7 +12,7 @@ public class Forgj {
         dist = uendelig;
     }
 
-    public void initforgj(Node s){
+    public static void initforgj(Node s){
         for (int i = N; i--> 0;){
             node[i].d = new Forgj();
         }
