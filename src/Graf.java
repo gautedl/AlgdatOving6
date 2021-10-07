@@ -11,6 +11,7 @@ public class Graf {
     BreddeFørst breddeFørst = new BreddeFørst();
 
 
+    //Skjønner ikke helt hvor ting blir lagret
     public void ny_ugraf(URL url) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -45,10 +46,14 @@ public class Graf {
 
     public void lesFraUrl(URL url) throws IOException {
 
-        Kø kø = new Kø();
 
         ny_ugraf(url);
 
+        //Alt er bare 0 :(
+        System.out.println(N);
+        Kø kø = new Kø();
+        System.out.println(kø.antall);
+        System.out.println(node);
 
         for (int i = 0; i < N; i++){
             breddeFørst.bfs(node[i]);
