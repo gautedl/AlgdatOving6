@@ -1,6 +1,6 @@
 public class BreddeFørst {
     Node[] node;
-    public int antallNoder = node.length;
+    //public int antallNoder = node.length;
 
     Forgj forgj = new Forgj();
 

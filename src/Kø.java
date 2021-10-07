@@ -1,6 +1,7 @@
 public class Kø {
 
     KøNode hode;
+    public int antall;
 
     public boolean tom(){
         return hode==null;
@@ -17,6 +18,7 @@ public class Kø {
             denne = denne.neste();
         }
         denne.neste = køNode;
+        antall++;
     }
 
     public Node taUtFremste(){
