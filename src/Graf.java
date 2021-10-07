@@ -24,6 +24,7 @@ public class Graf {
             int til = Integer.parseInt(st.nextToken());
             Kant k = new Kant(node[til], node[fra].kant1);
             node[fra].kant1 = k;
+
         }
     }
 
@@ -47,6 +48,7 @@ public class Graf {
         Kø kø = new Kø();
 
         ny_ugraf(url);
+
 
         for (int i = 0; i < N; i++){
             breddeFørst.bfs(node[i]);

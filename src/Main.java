@@ -10,10 +10,16 @@ import java.util.StringTokenizer;
 
 public class Main {
 
+
     public static void main(String[] args) throws IOException {
+        Node node = new Node();
+        Kø kø = new Kø();
+        BreddeFørst breddeFørst = new BreddeFørst();
+
         Graf graf = new Graf();
         URL url = new URL("http://www.iie.ntnu.no/fag/_alg/uv-graf/L7g1");
         graf.lesFraUrl(url);
+        System.out.println(breddeFørst.antall);
 
     }
 }

@@ -1,6 +1,7 @@
 public class BreddeFørst {
     Node[] node;
     //public int antallNoder = node.length;
+    int antall;
 
     Forgj forgj = new Forgj();
 
@@ -16,6 +17,7 @@ public class BreddeFørst {
                     f.dist = ((Forgj)n.d).dist + 1;
                     f.forgj = n;
                     kø.leggTilBakerst(k.til);
+                    antall++;
                 }
             }
         }
