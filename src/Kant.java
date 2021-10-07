@@ -6,4 +6,12 @@ public class Kant {
         til = n;
         neste = nst;
     }
+
+    @Override
+    public String toString() {
+        return "Kant{" +
+                "neste=" + neste +
+                ", til=" + til +
+                '}';
+    }
 }
