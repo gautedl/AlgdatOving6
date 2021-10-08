@@ -29,7 +29,6 @@ public class Graf {
             node[fra].kant1 = new Kant(node[til], node[fra].kant1);
 
         }
-        System.out.println(Arrays.toString(node));
     }
 
     public void initforgj(Node s){
@@ -76,7 +75,7 @@ public class Graf {
 
         System.out.println("Node:     Forgj:     Dist:");
         for (int i = 0; i < N; i++){
-            System.out.println(node[i].nodeID + "   " + node[i].d + "    " + node[i].d.dist);
+            System.out.println(node[i].nodeID + "      " + node[i].d + "       " + node[i].d.dist);
         }
 
     }
