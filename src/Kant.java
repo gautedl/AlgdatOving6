@@ -7,11 +7,4 @@ public class Kant {
         neste = nst;
     }
 
-    @Override
-    public String toString() {
-        return "Kant{" +
-                "neste=" + neste +
-                ", til=" + til +
-                '}';
-    }
 }

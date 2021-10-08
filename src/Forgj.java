@@ -1,5 +1,6 @@
 public class Forgj {
     int dist;
+    int nodeID;
     Node forgj;
     static int uendelig = 1000000000;
     public int finn_dist(){
