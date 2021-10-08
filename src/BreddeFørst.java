@@ -1,3 +1,6 @@
+
+
+//Trenger ikke denne klassen
 public class BreddeFørst {
     int antall;
 
