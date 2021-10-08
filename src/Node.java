@@ -1,6 +1,7 @@
 public class Node {
     Kant kant1;
-    Object d;
+    Forgj d;
+    int nodeID;
 
     @Override
     public String toString() {

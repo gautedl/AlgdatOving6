@@ -11,15 +11,19 @@ import java.util.StringTokenizer;
 public class Main {
 
 
+
+
     public static void main(String[] args) throws IOException {
-        Node node = new Node();
-        Kø kø = new Kø();
         BreddeFørst breddeFørst = new BreddeFørst();
 
         Graf graf = new Graf();
+        int startNummer = 0;
+
         URL url = new URL("http://www.iie.ntnu.no/fag/_alg/uv-graf/L7g1");
-        graf.lesFraUrl(url);
-        System.out.println(breddeFørst.antall);
+        graf.ny_ugraf(url);
+        breddeFørst.bfs(graf.node[startNummer]);
+        graf.lesFraUrl();
+        //System.out.println(breddeFørst.antall);
 
     }
 }
