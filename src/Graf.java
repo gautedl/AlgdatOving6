@@ -26,7 +26,8 @@ public class Graf {
             st = new StringTokenizer(br.readLine());
             int fra = Integer.parseInt(st.nextToken());
             int til = Integer.parseInt(st.nextToken());
-            node[fra].kant1 = new Kant(node[til], node[fra].kant1);
+            Kant k = new Kant(node[til], node[fra].kant1);
+            node[fra].kant1 = k;
 
         }
     }
