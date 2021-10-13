@@ -1,4 +1,4 @@
-public class Topo_lst {
+public class Topo {
     boolean funnet;
     Node neste;
 }

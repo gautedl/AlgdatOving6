@@ -66,12 +66,12 @@ public class Graf {
         }
     }
 
-    public Node df_topo(Node n, Node l){
-        Topo_lst nd = (Topo_lst) n.d;
+    public Node dftopo(Node n, Node l){
+        Topo nd = (Topo) n.d;
         if(nd.funnet) return l;
         nd.funnet = true;
         for(Kant k = n.kant1;k!=null;k=k.neste){
-            l = df_topo(k.til,l);
+            l = dftopo(k.til,l);
         }
         nd.neste = l;
         System.out.println(n.nodeID);
@@ -81,10 +81,10 @@ public class Graf {
     public Node topologisort(){
         Node l = null;
         for(int i=N;i-->0;){
-            node[i].d = new Topo_lst();
+            node[i].d = new Topo();
         }
         for (int i=N;i-->0;){
-            l = df_topo(node[i],l);
+            l = dftopo(node[i],l);
         }
         return l;
     }
