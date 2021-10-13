@@ -1,6 +1,6 @@
 public class Node {
     Kant kant1;
-    Forgj d;
+    Object d;
     int nodeID;
 
     @Override

@@ -9,9 +9,6 @@ public class Graf {
     int N, K;
     Node[] node;
 
-    //BreddeFørst breddeFørst = new BreddeFørst();
-
-
     public void ny_ugraf(URL url) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -36,7 +33,7 @@ public class Graf {
         for (int i = N; i--> 0;){
             node[i].d = new Forgj();
         }
-        s.d.dist = 0;
+        ((Forgj)s.d).dist = 0;
     }
 
     public void bfs(Node s){
@@ -46,20 +43,21 @@ public class Graf {
         while (!kø.tom()){
             Node n = kø.taUtFremste();
             for (Kant k = n.kant1; k != null; k = k.neste){
-                Forgj f = k.til.d;
+                Forgj f = (Forgj)k.til.d;
                 if (f.dist == Forgj.uendelig){
-                    f.dist = n.d.dist + 1;
+                    f.dist = ((Forgj)n.d).dist + 1;
                     f.forgj = n;
                     kø.leggTilBakerst(k.til);
                 }
             }
+            
         }
     }
 
     public void lesFraUrl(){
         System.out.println("Node:     Forgj:     Dist:");
         for (int i = 0; i < N; i++){
-            System.out.println(node[i].nodeID + "      " + node[i].d + "       " + node[i].d.dist);
+            System.out.println(node[i].nodeID + "      " + node[i].d + "       " + ((Forgj)node[i].d).dist);
         }
     }
 
