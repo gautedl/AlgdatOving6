@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Graf {
@@ -41,7 +40,7 @@ public class Graf {
         Kø kø = new Kø();
         kø.leggTilBakerst(s);
         while (!kø.tom()){
-            Node n = kø.taUtFremste();
+            Node n = kø.hentFremste();
             for (Kant k = n.kant1; k != null; k = k.neste){
                 Forgj f = (Forgj)k.til.d;
                 if (f.dist == Forgj.uendelig){
@@ -50,7 +49,7 @@ public class Graf {
                     kø.leggTilBakerst(k.til);
                 }
             }
-            
+            kø.fjernFremste();
         }
     }
 

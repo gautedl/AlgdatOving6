@@ -21,10 +21,14 @@ public class Kø {
         antall++;
     }
 
-    public Node taUtFremste(){
+    public Node hentFremste(){
+        return hode.node();
+    }
+
+    public Node fjernFremste(){
         KøNode retur = hode;
-        retur.neste = null;
         hode = hode.neste();
+        retur.neste = null;
         return retur.node();
     }
 

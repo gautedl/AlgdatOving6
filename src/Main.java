@@ -4,8 +4,6 @@ import java.net.URL;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        //BreddeFørst breddeFørst = new BreddeFørst();
-
         Graf graf = new Graf();
         int startNummer = 5;
 
