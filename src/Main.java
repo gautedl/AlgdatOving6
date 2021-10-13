@@ -11,6 +11,7 @@ public class Main {
         graf.ny_ugraf(url);
         graf.bfs(graf.node[startNummer]);
         graf.lesFraUrl();
-
+        System.out.println("\n");
+        graf.topologisort();
     }
 }
