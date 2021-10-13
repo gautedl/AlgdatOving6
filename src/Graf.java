@@ -56,7 +56,13 @@ public class Graf {
     public void lesFraUrl(){
         System.out.println("Node:     Forgj:     Dist:");
         for (int i = 0; i < N; i++){
-            System.out.println(node[i].nodeID + "      " + node[i].d + "       " + ((Forgj)node[i].d).dist);
+            int forgj;
+            if(((Forgj)node[i].d).forgj == null){
+                forgj = -1;
+            }else{
+                forgj = ((Forgj)node[i].d).forgj.nodeID;
+            }
+            System.out.println(node[i].nodeID + "      " + forgj + "       " + ((Forgj)node[i].d).dist);
         }
     }
 
