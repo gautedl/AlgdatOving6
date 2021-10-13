@@ -39,22 +39,6 @@ public class Graf {
         s.d.dist = 0;
     }
 
-    public void ny_ugraftab(URL url) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        N = Integer.parseInt(st.nextToken());
-        Kanttab[][] kant = new Kanttab[N][N];
-        for (int i=0; i<N; ++i) for (int j=0; j<N; ++j) kant[i][j] = new Kanttab();
-        K = Integer.parseInt(st.nextToken());
-        for (int i=0; i<K; i++) {
-            st = new StringTokenizer(br.readLine());
-            int fra = Integer.parseInt(st.nextToken());
-            int til = Integer.parseInt(st.nextToken());
-            kant[fra][til].fins=1;
-
-        }
-    }
-
     public void bfs(Node s){
         initforgj(s);
         Kø kø = new Kø();
@@ -73,12 +57,10 @@ public class Graf {
     }
 
     public void lesFraUrl(){
-
         System.out.println("Node:     Forgj:     Dist:");
         for (int i = 0; i < N; i++){
             System.out.println(node[i].nodeID + "      " + node[i].d + "       " + node[i].d.dist);
         }
-
     }
 
 
